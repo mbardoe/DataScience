@@ -1,0 +1,41 @@
+{"type":"cell","id":"012573","pos":8,"input":"Find the correlation between all of the quantitative variables.\n","cell_type":"markdown"}
+{"type":"cell","id":"06770f","pos":21,"input":"## Multilinear Analysis\n\nNow create 3 multilinear models of your chosing. (give each a different name). For each identify the equation of the line of best fit, state the what the intercept and coeffients mean in context, and state the R-squared in context. You should also explain whether the variables belong in the model (think asterix).","cell_type":"markdown"}
+{"type":"cell","id":"1c7fa2","pos":32.75,"input":""}
+{"type":"cell","id":"1f2b0f","pos":32,"input":"","cell_type":"code","exec_count":0}
+{"type":"cell","id":"206dc2","pos":12,"input":"Make 3 simple linear models (call each a different name). For each identify the equation of the line of best fit, state the what the intercept and slope mean in context, and state the R-squared in context. You should also explain whether the variables belong in the model (think asterix).","cell_type":"markdown"}
+{"type":"cell","id":"28b041","pos":28,"input":"","cell_type":"code","exec_count":0}
+{"type":"cell","id":"2c79f0","pos":34,"input":"","cell_type":"code","exec_count":0}
+{"type":"cell","id":"4035a6","pos":9,"input":"","cell_type":"code","exec_count":0}
+{"type":"cell","id":"43ec16","pos":15,"input":"","cell_type":"code","exec_count":0}
+{"type":"cell","id":"4aef53","pos":10,"input":"Make a plot of 4 of the variables at once. You choose which","cell_type":"markdown"}
+{"type":"cell","id":"4bb77f","pos":20,"input":"","cell_type":"code","exec_count":0}
+{"type":"cell","id":"57ffbc","pos":7,"input":"","cell_type":"code","exec_count":0}
+{"type":"cell","id":"59b510","pos":32.625,"input":""}
+{"type":"cell","id":"656725","pos":29,"input":"### Make a prediction\n\nMake some predictions based on your models.\n\n","cell_type":"markdown"}
+{"type":"cell","id":"6dfbc2","pos":25,"input":"","cell_type":"code","exec_count":0}
+{"type":"cell","id":"70beaf","pos":24,"input":"","cell_type":"code","exec_count":0}
+{"type":"cell","id":"72ea60","pos":23,"input":"","cell_type":"code","exec_count":0}
+{"type":"cell","id":"89e967","pos":16,"input":"answer2","cell_type":"markdown"}
+{"type":"cell","id":"8a47fb","pos":26,"input":"","cell_type":"code","exec_count":0}
+{"type":"cell","id":"90bcd0","pos":11,"input":"","cell_type":"code","exec_count":0}
+{"type":"cell","id":"9a3ef1","pos":27,"input":"","cell_type":"code","exec_count":0}
+{"type":"cell","id":"9d8748","pos":4,"input":"Take a look at this data. \n\n","cell_type":"markdown"}
+{"type":"cell","id":"a347c8","pos":18,"input":"answer3","cell_type":"markdown"}
+{"type":"cell","id":"a39c7f","pos":13,"input":"","cell_type":"code","exec_count":0}
+{"type":"cell","id":"a96190","pos":30,"input":"","cell_type":"code","exec_count":0}
+{"type":"cell","id":"b25106","pos":31,"input":"","cell_type":"code","exec_count":0}
+{"type":"cell","id":"b26bef","pos":0,"input":"# Day 6 Multilinear Regression Practice\n\nToday we will be practicing our regression skills by trying to figure out what factors contribute to making a university highly ranked. Specifically we will try to predict a schools total_score based on several criteria. ","cell_type":"markdown"}
+{"type":"cell","id":"bced22","pos":17,"input":"","cell_type":"code","exec_count":0}
+{"type":"cell","id":"bf7193","pos":3,"input":"University<-read.csv(\"University.csv\")","cell_type":"code","exec_count":2}
+{"type":"cell","id":"ca872f","pos":1,"input":"library(dplyr)\nlibrary(ggplot2)","output":{"0":{"name":"stderr","output_type":"stream","text":"\nAttaching package: ‘dplyr’\n\n"},"1":{"name":"stderr","output_type":"stream","text":"The following objects are masked from ‘package:stats’:\n\n    filter, lag\n\n"},"2":{"name":"stderr","output_type":"stream","text":"The following objects are masked from ‘package:base’:\n\n    intersect, setdiff, setequal, union\n\n"}},"cell_type":"code","exec_count":1}
+{"type":"cell","id":"d46009","pos":2,"input":"Load up the dataset.\n\n```\nUniversity<-read.csv(\"University.csv\")\n```","cell_type":"markdown"}
+{"type":"cell","id":"de9f9d","pos":33,"input":"### How much better is your best multimodel than your best simplemodel\n\n**Question** How much better is your best multilinear model as compared to your best simple regression.","cell_type":"markdown"}
+{"type":"cell","id":"e608ad","pos":14,"input":"answer1","cell_type":"markdown"}
+{"type":"cell","id":"e79c02","pos":5,"input":"","cell_type":"code"}
+{"type":"cell","id":"eb4523","pos":6,"input":"## University Data\n\n\n**world_rank**: world rank for university. Contains rank ranges and equal ranks (eg. 101-152)\n\n**university_name**: name of university\n\n**national_rank**: rank of university within its country\n\n**total_score**: total score, used to determine rank\n\n**alumni**: Alumni Score, based on the number of alumni of an institution winning nobel prizes and fields medals\n\n**award**: Award Score, based on the number of staff of an institution winning Nobel Prizes in Physics, Chemistry, Medicine, and Economics and Fields Medals in Mathematics\n\n**hici**: HiCi Score, based on the number of Highly Cited Researchers selected by Thomson Reuters\n\n**ns**: N&S Score, based on the number of papers published in Nature and Science\n\n**pub**: PUB Score, based on total number of papers indexed in the Science Citation Index-Expanded and Social Science Citation Index\n\n**pcp**: PCP Score, the weighted scores of the above five indicators divided by the number of full time academic staff\n\n**year**: year of ranking (2005 to 2015)\n\n","cell_type":"markdown"}
+{"type":"cell","id":"eb81f4","pos":32.5,"input":"### Residual Plots in Multilinear regression\n\nOne way Data Scientists check their predictions is with a residual plot. You hope that your residuals will be randomly distributed among your predicted values. \n\n**Create a residual plot for your best multilinear model**\n\n1. Create a new column in your dataframe that has the predicted value of your model.\n2. Create a new column in your dataframe that has the residual value of your model.\n3. Create a scatterplot of the predicted vs. residual. Is there a pattern in the data? If so then your model may have some non-linearity or other issues. We will discuss how to deal with those in future classes.","cell_type":"markdown"}
+{"type":"cell","id":"eca3d2","pos":19,"input":"Make a scatterplot of what you believe to be your best simple model. Make sure to include the line of best fit.","cell_type":"markdown"}
+{"type":"cell","id":"f34b20","pos":32.5625,"input":""}
+{"type":"cell","id":"f50916","pos":22,"input":"","cell_type":"code","exec_count":0}
+{"type":"file","last_load":1544792423514}
+{"type":"settings","kernel":"ir-sage","backend_state":"running","metadata":{"language_info":{"codemirror_mode":"r","file_extension":".r","mimetype":"text/x-r-source","name":"R","pygments_lexer":"r","version":"3.4.4"}},"kernel_state":"idle","kernel_usage":{"cpu":0,"memory":62472192}}

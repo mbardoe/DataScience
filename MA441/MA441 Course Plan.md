@@ -1,23 +1,19 @@
-# MA441-443 Plan for 2019-20
-
-I think that we will look to include Cocalc, R, Excel(Sheets) through out the year next year.
-
-
-Topics in order of study:
-
-
 ## MA441 (27 Lessons)
 
 &nbsp;
 &nbsp;
 
-* Data Definitions
+* **Unit 1** Data Definitions
 
   Day 1-3
   
   - Practice creating and displaying data: Students learn the basics of bar charts and histograms by interpreting the information from and day 1 survey. Most of this work is done in a spreadsheet software program such as Excel or Google Sheets. Introduce mean, median, mode, range, 5 number summaries. 
   
-* Introduction to the Tools of Data Science
+
+&nbsp;
+&nbsp;
+
+* **Unit 2** Introduction to the Tools of Data Science
 
   Day 4-9
   
@@ -26,7 +22,7 @@ Topics in order of study:
 &nbsp;
 &nbsp;
 
-* Introduction to Sampling and Error
+* **Unit 3** Introduction to Sampling and Error
 
   Day 10-13
   
@@ -35,7 +31,7 @@ Topics in order of study:
 &nbsp;
 &nbsp;
   
-* Variation and Standard Deviation as a Ruler
+* **Unit 4** Variation and Standard Deviation as a Ruler
 
   Day 14-17
 
@@ -44,7 +40,7 @@ Topics in order of study:
 &nbsp;
 &nbsp;
 
-* Normal Distribution
+* **Unit 5** Normal Distribution
 
   Day 18-23
 
@@ -53,7 +49,7 @@ Topics in order of study:
 &nbsp;
 &nbsp;
 
-* Linear Regression
+* **Unit 6** Linear Regression
   
   Day 24-27
 
@@ -66,42 +62,3 @@ Topics in order of study:
 * Term End Experience
 
 ?????
-
-
-### Assignment Sheet
-
-| Day  | Class work  | Homework | Resources|
-| :----: |---------------| :-------------|--------:|
-| 1 | Class Intro/Fill out initial Survey |          1600 ||
-| 2 |    Load data into google sheets. Discuss different types of data. Discuss the necessity of cleaning data     |   MA441/Unit 1/Assignment1.md|
-| 3 |     More about histograms, box plots, discussion of bad plots     |        |    Carey's collection of bad plots |
-| 4 |  |        |     |
-| 5 |          |        |     |
-| 6 |          |        |     |
-| 7 |          |        |     |
-| 8 |          |        |     |
-| 9 |          |        |     |
-| 10 |          |        |     |
-| 11|          |        |     |
-| 12 |          |        |     |
-| 13 |          |        |     |
-| 14 |          |        |     |
-| 15 |          |        |     |
-| 16 |          |        |     |
-| 17 |          |        |     |
-| 18|          |        |     |
-| 19 |          |        |     |
-| 20 |          |        |     |
-| 21 |          |        |     |
-| 22 |          |        |     |
-| 23 |          |        |     |
-| 24 |          |        |     |
-| 25 |          |        |     |
-| 26 |          |        |     |
-| 27 |          |        |     |
-| TEE |          |        |     |
-
-## MA442 (25 Lessons)
-
-## MA443 (25 Lessons)
-

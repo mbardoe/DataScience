@@ -1,0 +1,4 @@
+{"backend_state":"running","kernel":"ir-sage","kernel_state":"idle","kernel_usage":{"cpu":0,"memory":63311872},"metadata":{"language_info":{"codemirror_mode":"r","file_extension":".r","mimetype":"text/x-r-source","name":"R","pygments_lexer":"r","version":"3.4.4"}},"type":"settings"}
+{"cell_type":"raw","id":"5fbf9a","input":"","pos":1,"type":"cell"}
+{"id":0,"time":1554386045896,"type":"user"}
+{"last_load":1554382040808,"type":"file"}

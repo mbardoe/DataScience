@@ -1,0 +1,66 @@
+{"input":"","pos":11,"cell_type":"code","type":"cell","id":"3192b4","kernel":"ir-sage"}
+{"input":"","pos":17,"cell_type":"code","type":"cell","id":"2c8288","kernel":"ir-sage"}
+{"input":"","pos":21,"cell_type":"code","type":"cell","id":"e4cf26","kernel":"ir-sage"}
+{"input":"","pos":23,"cell_type":"code","type":"cell","id":"1f2749","kernel":"ir-sage"}
+{"input":"","pos":25,"cell_type":"code","type":"cell","id":"028152","kernel":"ir-sage"}
+{"input":"","pos":27,"cell_type":"code","type":"cell","id":"cf6d43","kernel":"ir-sage"}
+{"input":"","pos":29,"cell_type":"code","type":"cell","id":"e238d2","kernel":"ir-sage"}
+{"input":"","pos":3,"cell_type":"code","type":"cell","id":"24cf5a","kernel":"ir-sage"}
+{"input":"","pos":31,"cell_type":"code","type":"cell","id":"0c7cc5","kernel":"ir-sage"}
+{"input":"","pos":33,"cell_type":"code","type":"cell","id":"2de71c","kernel":"ir-sage"}
+{"input":"","pos":35,"cell_type":"code","type":"cell","id":"a759c7","kernel":"ir-sage"}
+{"input":"","pos":39,"cell_type":"code","type":"cell","id":"838754","kernel":"ir-sage"}
+{"input":"","pos":41,"cell_type":"code","type":"cell","id":"02d3ca","kernel":"ir-sage"}
+{"input":"","pos":46,"cell_type":"code","type":"cell","id":"bb371a","kernel":"ir-sage"}
+{"input":"","pos":5,"cell_type":"code","type":"cell","id":"fe02ef","kernel":"ir-sage"}
+{"input":"","pos":7,"cell_type":"code","type":"cell","id":"ccc303","kernel":"ir-sage"}
+{"input":"","pos":9,"cell_type":"code","type":"cell","id":"89d943","kernel":"ir-sage"}
+{"input":"\n","scrolled":true,"pos":1,"cell_type":"code","type":"cell","id":"b7452f","kernel":"ir-sage"}
+{"type":"cell","id":"00cd9e","pos":6,"input":"We are going to try to see if there is an association between the ratings for Judicial Integrity and Demeanor. We can type\n\n```\nUSJudgeRatings$INTG\n```\n\neach time we want to use the Judicial Integrity variable or we could make a shortcut for ourselves. Try this\n\n```\nJI <-USJudgeRatings$INTG \n```","cell_type":"markdown"}
+{"type":"cell","id":"06b344","pos":54,"input":"","cell_type":"markdown"}
+{"type":"cell","id":"083a58","pos":55,"input":"Make a scatterplot that includes the line of best fit. Make sure that the title and labels are correct.","cell_type":"markdown"}
+{"type":"cell","id":"0b3e9b","pos":53,"input":"","cell_type":"code"}
+{"type":"cell","id":"10f289","pos":50,"input":"","cell_type":"code"}
+{"type":"cell","id":"11c45f","pos":15,"input":"","cell_type":"code"}
+{"type":"cell","id":"125ef0","pos":44,"input":"","cell_type":"markdown"}
+{"type":"cell","id":"138c1f","pos":13,"input":"","cell_type":"code"}
+{"type":"cell","id":"1ebad4","pos":20,"input":"Now we will create linear modelby performing a simple linear regression.\n```\nlinearMod <- lm(JI ~ DM )\n```","cell_type":"markdown"}
+{"type":"cell","id":"21c591","pos":38,"input":"Now what if you had three new judges whose Demeanor ratings were 1, 7.3 and 10. What would you predict that their Judicial Integrity ratigns would be?\n```\npredict(linearMod,data.frame(DM = c(1,7.3,10)))\n```","cell_type":"markdown"}
+{"type":"cell","id":"248152","pos":60,"input":"Predict the height of trees with girths 5, 6, 7, 8, 9, 10, 11, 12, 13 and 15.7","cell_type":"markdown"}
+{"type":"cell","id":"2d5cac","pos":37,"input":"","cell_type":"markdown"}
+{"type":"cell","id":"38dc23","pos":45,"input":"Make shortcuts for the girth and height variables.","cell_type":"markdown"}
+{"type":"cell","id":"3b54da","pos":4,"input":"Get a quick look at the data set by using the head command\n```\nhead(USJudgeRatings)\n```","cell_type":"markdown"}
+{"type":"cell","id":"3bbbfa","pos":61,"input":"","cell_type":"code"}
+{"type":"cell","id":"3e255a","pos":34,"input":"Now we can make a graph of the residuals\n```\nplot(DM,USJudgeRatings$Residuals,col = \"blue\",main = \"Residual Plot\",\ncex = 1.3,pch = 16,xlab = \"Demeanor\",ylab = \"Residuals\")\n```","cell_type":"markdown"}
+{"type":"cell","id":"465121","pos":51,"input":"","cell_type":"markdown"}
+{"type":"cell","id":"4fcef9","pos":42.5,"input":""}
+{"type":"cell","id":"50bd95","pos":8,"input":"Now every time we type JI our program will read it as USJudgeRatings$INTG\n\nMake a shortcut for Demeanor\n```\nDM<-USJudgeRatings$DMNR\n```\n","cell_type":"markdown"}
+{"type":"cell","id":"52a82a","pos":28,"input":"Now lets add the regression line to our scatterplot\n\n```\nplot(DM,JI,col = \"blue\",main = \"Judicial Integrity vs Demeanor Regression\",\nabline(lm(JI~DM)),cex = 1.3,pch = 16, \n    xlab = \"Demeanor Rating\",ylab = \"Judicial Integrity Rating\")\n```\nThe only real difference is the *abline(lm(JI~DM))* before the cex.\n","cell_type":"markdown"}
+{"type":"cell","id":"56b926","pos":52,"input":"What is the correlation between girth and height? What is R-squared?\n","cell_type":"markdown"}
+{"type":"cell","id":"5d7a29","pos":18,"input":"You can also change the size of the dots by changing the number after cex and the shape of the dots by changing the number after pch. Try adjusting them now","cell_type":"markdown"}
+{"type":"cell","id":"5fab55","pos":36,"input":"Do you see a pattern in the residuals?","cell_type":"markdown"}
+{"type":"cell","id":"62ca92","pos":32,"input":"We can add this list to our data set through this command\n```\nUSJudgeRatings <- USJudgeRatings %>%\n  mutate(Residuals = resid(linearMod))\n```\n","cell_type":"markdown"}
+{"type":"cell","id":"66965b","pos":49,"input":"Find the equation of the line of best fit and explain in context what the slope and y-intercept tell us.","cell_type":"markdown"}
+{"type":"cell","id":"6c6aef","pos":26,"input":"If we use the command\n```\nsummary(linearMod)\n```\nWe will get the model, R-squared, and a bunch of other interesting information that may come in handy later.","cell_type":"markdown"}
+{"type":"cell","id":"8592eb","pos":16,"input":"To find a list of all the colors availible you can type\n```\ncolors()\n```","cell_type":"markdown"}
+{"type":"cell","id":"8e6992","pos":14,"input":"You can also change the color of the by typing in different colors.Try typing in a few colors to see what happens","cell_type":"markdown"}
+{"type":"cell","id":"9088cc","pos":30,"input":"Much like our calculators keep a list of all the residuals after running a regression R does as well\n```\nresid(linearMod)\n```","cell_type":"markdown"}
+{"type":"cell","id":"9122d9","pos":40,"input":"## Trees\n\nIs there a relationship between the girth and height of a tree?\n```\ndata(trees)\n```","cell_type":"markdown"}
+{"type":"cell","id":"9a4354","pos":59,"input":"","cell_type":"markdown"}
+{"type":"cell","id":"9e9e8f","pos":47,"input":"Create a scatterplot of girth vs height where girth is the explanatory variable. Make sure that it has a good title, good labels, very small points, unusually shaped points, and a unique color.","cell_type":"markdown"}
+{"type":"cell","id":"ab8686","pos":58,"input":"","cell_type":"code"}
+{"type":"cell","id":"abbae5","pos":2,"input":"The data set we will look at is of Lawyers' ratings of state judges in the US Superior Court. Load the data set and use the \"?\" command to find out more about this data set.\n\n\n```\ndata(USJudgeRatings)\n?USJudgeRatings\n```\n\n","cell_type":"markdown"}
+{"type":"cell","id":"adf14e","pos":22,"input":"By typing\n```\nprint(linearMod)\n```\nwe can see the regression line where Intercept is the y-intercept and the number under the variable is the coefficient of the variable.","cell_type":"markdown"}
+{"type":"cell","id":"af4bb0","pos":42,"input":"Find out a little bit about your data set. How many trees are there? What are the variables? ","cell_type":"markdown"}
+{"type":"cell","id":"b0619b","pos":48,"input":"","cell_type":"code"}
+{"type":"cell","id":"b70881","pos":12,"input":"Notice that this way of making a scatterplot is slightly different than the one we made on Day 1. One advantage of this method is that it is more customizable. Notice that you can easily change the title and labels to whatever you want. Change the title to *Ratings of Judicial Integrity vs Demeanor* and the labels to *Judicial Integrity* and *Demeanor* ","cell_type":"markdown"}
+{"type":"cell","id":"b788b9","pos":0,"input":"# Day 3: Linear Regression\n\nWe have learned how to minipulate a data set and how to make certain displays.\nToday we will learn how to perform a linear regression.\n\n\nFirst we need to load the helpful libraries of ```dplyr``` and ```ggplot2```.\n\n```\nlibrary(dplyr)\nlibrary(ggplot2)\n```\n\n","cell_type":"markdown"}
+{"type":"cell","id":"c80fd9","pos":24,"input":"We can find the correlation between Judicial Integrity and Demeanor by using this command\n```\ncor(JI,DM)\n```","cell_type":"markdown"}
+{"type":"cell","id":"d256eb","pos":62,"input":"","cell_type":"markdown"}
+{"type":"cell","id":"d74585","pos":10,"input":"###### Now create a scatterplot of Judicial Integrity vs Demeanor of the judges. Notice where we used our new shortcuts!\n\n```\nplot(DM,JI,col = \"blue\",main = \"Ratings\",\ncex = 1.3,pch = 16,xlab = \"DEM\",ylab = \"JI\")\n```","cell_type":"markdown"}
+{"type":"cell","id":"e4f3ea","pos":56,"input":"","cell_type":"code"}
+{"type":"cell","id":"f82fd6","pos":43,"input":"","cell_type":"code","exec_count":0}
+{"type":"cell","id":"f83a23","pos":57,"input":"Make a residual plot and comment on the appropriateness of the model.","cell_type":"markdown"}
+{"type":"cell","id":"faba79","pos":19,"input":"","cell_type":"code"}
+{"type":"file","last_load":1544014415944}
+{"type":"settings","kernel":"ir-sage","backend_state":"running","metadata":{"language_info":{"codemirror_mode":"r","file_extension":".r","mimetype":"text/x-r-source","name":"R","pygments_lexer":"r","version":"3.4.4"}},"trust":true,"kernel_usage":{"cpu":0,"memory":62447616},"kernel_state":"idle"}

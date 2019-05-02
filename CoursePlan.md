@@ -103,5 +103,84 @@ Topics in order of study:
 
 ## MA442 (25 Lessons)
 
+&nbsp;
+&nbsp;
+
+* **Unit 1** Multi-linear Regression
+
+  Day 1-6
+  
+  - ??? 
+&nbsp;
+&nbsp;
+
+* **Unit 2** Chi Square Tests
+  Day 7-10
+  
+  - ??? 
+  
+&nbsp;
+&nbsp;
+
+* **Unit 3** Confidence intervals and Margin of Error
+  
+  Day 11-18
+  
+  - ??? 
+  
+&nbsp;
+&nbsp;
+
+* **Unit 4** ANOVA
+
+  Day 19-22
+  
+  - ??? 
+  
+&nbsp;
+&nbsp;
+
+* **Unit 5** Simulation
+  
+  Day 23-27
+  
+  - ??? 
+  
+&nbsp;
+&nbsp;
+
+
 ## MA443 (25 Lessons)
+
+&nbsp;
+&nbsp;
+
+* **Unit 1** Sampling Methods and Survey Design
+
+  Day 1-5
+  
+  - ??? 
+  
+   
+&nbsp;
+&nbsp;
+
+* **Unit 2** Experiment Design
+
+  Day 6-10
+  
+  - ??? 
+ 
+&nbsp;
+&nbsp;
+
+* **Unit 3** Two Sample T-test
+
+  Day 11-13
+  
+  - ??? 
+ 
+&nbsp;
+&nbsp;
+
 
